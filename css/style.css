@@ -1,0 +1,225 @@
+/*estilo geral*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Merriweather", serif;
+  /*font-family: "Poppins", sans-serif;*/
+}
+body {
+  background: linear-gradient(
+    to bottom right,
+    black,
+    black,
+    black,
+    purple,
+    black
+  );
+  height: 100vh;
+  width: auto;
+}
+.interface {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+.botao-contato button {
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: purple;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+button:hover {
+  box-shadow: 0px 0px 10px #a700fe;
+  color: white;
+  transform: scale(1.25);
+}
+h2.titulo {
+  color: rgb(255, 255, 255);
+  font-size: 38px;
+  text-align: justify;
+  padding: 40px 4%;
+}
+h2.titulo span {
+  color: #a700fe;
+}
+/*estilo cabeçalho*/
+
+header {
+  padding: 40px 4%;
+}
+
+header > .interface {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  color: rgb(180, 180, 180);
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+header a:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+header nav ul {
+  list-style-type: none;
+}
+header nav ul li {
+  display: inline-block;
+  padding: 0 40px;
+}
+
+/*estilo topo site*/
+
+section.topo-do-site {
+  padding: 40px 4%;
+}
+
+section.topo-do-site .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+.topo-do-site h1 {
+  color: white;
+  font-size: 45px;
+  line-height: 40px;
+}
+.topo-do-site .texto-topo-site h1 span {
+  color: #a700fe;
+  font-size: 90px;
+}
+.topo-do-site .texto-topo-site p {
+  color: white;
+  margin: 40px 0px;
+}
+.topo-do-site .texto-topo-site p span {
+  color: #a700fe;
+  font-size: 30px;
+}
+
+.topo-do-site .imagem-topo-site img {
+  position: relative;
+  animation: flutuar 1s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 40px;
+  }
+}
+
+/*estilo habilidades*/
+
+section.habilidades {
+  padding: 80px 4%;
+}
+section.habilidades .habilidades-box img {
+  width: 150px;
+  height: 150px;
+  margin: 40px;
+}
+/*estilo quem sou eu*/
+section.quem-sou-eu {
+  padding: 80px 4%;
+}
+.quem-sou-eu img {
+  width: 198px;
+  height: 322px;
+}
+section.quem-sou-eu .flex {
+  align-items: center;
+  gap: 60px;
+}
+.quem-sou-eu .texto-sobre {
+  color: white;
+}
+.quem-sou-eu .texto-sobre h2 {
+  font-size: 30px;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+.quem-sou-eu .texto-sobre h2 span {
+  color: #fe5d00;
+  display: block;
+}
+.quem-sou-eu .texto-sobre p {
+  margin: 20px 0;
+  text-align: justify;
+}
+.quem-sou-eu .texto-sobre .botao-social button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: #a700fe;
+  font-size: 30px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: 0.2s;
+}
+
+@media screen and (max-width: 1150px) {
+
+  /*classes gerais*/
+
+  .flex{
+    flex-direction: column;
+  }
+  .botao-contato button {
+    padding: 10px 40px;
+    font-size: 20px;
+    font-weight: 400px;
+    background-color: purple;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  button:hover {
+    box-shadow: 0px 0px 10px #a700fe;
+    color: white;
+    transform: scale(1.05);
+  }
+
+  /*cabeçalho*/
+  .menu-desktop{
+    display: inline;
+    font-size: 20px;
+  }
+
+  /*topo site*/
+  .topo-do-site .flex{
+    flex-direction: column-reverse;
+  }
+
+  .topo-do-site h1 {
+    line-height: 35px;
+    font-size: 35px;
+}
+.topo-do-site .imagem-topo-site img {
+  width: 100%;
+}
+
+/*habilidades*/
+.quem-sou-eu .flex {
+  flex-direction: column-reverse;
+}
+
+}
